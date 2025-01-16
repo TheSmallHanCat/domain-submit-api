@@ -213,6 +213,12 @@ function handleStatus($pdo) {
 
 // 获取任务
 function handleGetTask($pdo) {
+    $passwd = isset($_GET['passwd']) ? $_GET['passwd'] : '';
+
+    if ($passwd !== 'hancat') { // 填写请求密码，用于后端获取待处理域名
+        echo "密码错误";
+        exit;
+    }
     // 获取一个随机的 pending 状态任务
     $stmt = $pdo->prepare("SELECT task_id, domain FROM tasks WHERE status = 'pending' ORDER BY RAND() LIMIT 1");
     $stmt->execute();
