@@ -1,4 +1,4 @@
-# 基于 PHP 实现的域名提交程序 ✨
+# 基于 PHP 实现的域名提交前端程序 ✨
 
 本项目使用了 **[Linux.do OAuth 2.0 SDK](https://linux.do/t/topic/191534?u=thesmallhancat)**
 
